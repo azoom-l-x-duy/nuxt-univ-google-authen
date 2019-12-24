@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-universal",
+  "version": "1.0.0",
+  "description": "My unreal Nuxt.js project",
+  "author": "Le Xuan Duy",
+  "private": true,
+  "scripts": {
+    "dev": "env $(grep -v '^#' ./.env) nuxt",
+    "build": "env $(grep -v '^#' ./.env) nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "^4.8.4",
+    "@nuxtjs/axios": "^5.9.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
