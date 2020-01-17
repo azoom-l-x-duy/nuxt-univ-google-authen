@@ -1,1 +1,7 @@
+# build files
+.nuxt
+node_modules
+
 !.env
+.git
+.editorconfig

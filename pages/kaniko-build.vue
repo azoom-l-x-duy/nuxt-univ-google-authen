@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>This is response from api : {{ welcomeText }}</p>
+    <p>{{ welcomeText }}</p>
   </div>
 </template>
 
@@ -13,10 +13,11 @@ export default {
   async mounted() {
     const response = await this.$axios({
       method: 'GET',
-      url: `/users/Anynomous`,
+      url: `/ping`,
       baseUrl: process.env.API_URL,
       headers: {
         'Access-Control-Allow-Origin': '*',
+        'Authorization': `${this.$auth.getToken('google')}`
       }
     })
     this.welcomeText = response.data
